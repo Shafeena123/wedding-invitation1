@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shafeena ❤️ Shamir | Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="music/wedding.mp3" type="audio/mpeg">
+</audio>
+
+
+<div id="splash">
+
+    <div class="splash-overlay"></div>
+
+    <div class="splash-content">
+
+        <p class="allah-text">
+            In The Name Of Allah
+        </p>
+
+        <h1>
+            Shafeena ❤️ Shamir
+        </h1>
+
+        <p class="invite-text">
+            Cordially Invite You to Our Special Day
+        </p>
+
+        <button id="openBtn">
+            Tap To Open
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+<div id="particles"></div>
+
+<button id="musicBtn">🎵</button>
+
+<section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+    <div class="bismillah">
+        ﷽
+    </div>
+
+    <p class="subtitle">
+       WE'RE GETTING MARRIED
+    </p>
+
+    <h1 class="couple-name">
+        Shafeena
+        <span>&</span>
+        Shamir
+    </h1>
+
+    <p class="arabic-text">
+    في الدنيا والآخرة
+    </p>
+
+    <p class="marry-text">
+    In this world, and in the next.
+    </p>
+
+   
+    <!-- Scratch Date Reveal -->
+    <div class="scratch-card" onclick="revealDate()">
+
+        <div class="real-date">
+            11 October 2026
+        </div>
+
+        <div class="scratch-layer" id="scratchLayer">
+            ✨ Scratch To Reveal Date ✨
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<section class="couple-section">
+
+    <div class="glass-card bride">
+        <img src="images/bride.jpg" alt="">
+        <h2>Shafeena</h2>
+        <p>The Bride</p>
+        <p><strong>D/O T.Sainudeen</strong></p>
+    </div>
+
+    <div class="glass-card groom">
+        <img src="images/groom.jpg" alt="">
+        <h2>Shamir</h2>
+        <p>The Groom</p>
+        <p><strong>S/O Subair</strong></p>
+    </div>
+
+</section>
+
+<section class="countdown-section">
+
+    <h2>Countdown To Nikah</h2>
+
+    <div class="countdown">
+
+        <div class="box">
+            <span id="days">00</span>
+            <small>Days</small>
+        </div>
+
+        <div class="box">
+            <span id="hours">00</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="box">
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="box">
+            <span id="seconds">00</span>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+
+</section>
+</section>
+
+
+
+<section class="rsvp-section">
+
+    <h2>Will You Attend?</h2>
+
+    <p class="rsvp-text">
+        We would be delighted to celebrate our special day with you.
+    </p>
+
+    <div class="rsvp-buttons">
+
+        <button class="rsvp-btn yes-btn" onclick="goToThankYou()">
+            Yes, Insha Allah
+        </button>
+
+        <button class="rsvp-btn no-btn">
+            Unfortunately, I Can't Make It
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<section class="story">
+
+    <img src="images/storyline.jpg" class="story-image">
+
+    <div class="story-text">
+        <h2>Welcome!</h2>
+
+        <p>
+            We warmly invite you to celebrate our Nikah day with us. We look forward to sharing this beautiful and unforgettable occasion with our loved ones.
+        </p>
+
+    </div>
+
+</section>
+<section class="events">
+
+    <div class="event-card">
+        <h2>🌿 Mehendi Ceremony</h2>
+        <p>10 October 2026</p>
+        <p>8:00 PM</p>
+        <p>Taj Palace, Shimogga</p>
+    </div>
+
+    <div class="event-card">
+        <h2>💍 Nikah Ceremony</h2>
+        <p>11 October 2026</p>
+        <p>11:30 AM</p>
+        <p>Taj Palace, Shimogga</p>
+    </div>
+
+</section>
+
+<section class="venue">
+
+    <h2>Taj Palace</h2>
+
+    <p>
+        Aks Layout, Mattur Main Road,
+        Urgadur, Shimoga – 577203,
+        Karnataka
+    </p>
+
+    <a class="map-btn"
+       href="https://maps.app.goo.gl/hNm4qvZvtt2MXunY9?g_st=aw"
+       target="_blank">
+       Open Google Maps
+    </a>
+
+</section>
+
+<footer>
+
+    <h2>A note from us</h2>
+
+    <p>
+        "Every love story is beautiful, but ours is our favorite. We are so greatful to have you in our lives & we can't wait to celebrate this special chapter with you by our side".   
+    </p>
+
+<p>
+Your presence is the greatest gift we could ask for. Let's make memories that will last a lifetime.
+</p>
+
+    <h3>
+        Shafeena ❤️ Shamir
+    </h3>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+
