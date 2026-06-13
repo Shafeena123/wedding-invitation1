@@ -76,7 +76,7 @@ body{
 
 .splash-content h1{
     font-family:'Great Vibes', cursive;
-    font-size:clamp(3rem, 8vw, 5rem);
+    font-size:clamp(2.5rem, 8vw, 5rem);
     color:#ffffff;
     margin-bottom:20px;
     line-height:1.2;
@@ -109,35 +109,41 @@ body{
     font-weight:bold;
 }
 
-/* =========================
-   MOBILE
-========================= */
+@media screen and (max-width:768px){
 
-@media (max-width:768px){
+    #splash{
+        padding:20px;
+    }
+
+    .splash-content{
+        width:100%;
+        max-width:100%;
+        padding:0;
+    }
 
     .allah-text{
-        font-size:1rem;
-        letter-spacing:1px;
+        font-size:14px;
+        margin-bottom:10px;
     }
 
     .splash-content h1{
-        font-size:3rem;
+        font-size:2.8rem;
         line-height:1.3;
+        margin-bottom:15px;
     }
 
     .invite-text{
         font-size:1.1rem;
+        margin-bottom:25px;
         padding:0 10px;
     }
 
     #openBtn{
-        width:220px;
-        padding:14px 20px;
-        font-size:1rem;
+        width:180px;
+        padding:12px 20px;
+        font-size:15px;
     }
 }
-
-
 /* =========================
    PARTICLES
 ========================= */
@@ -286,7 +292,7 @@ body{
 ========================= */
 
 .hero{
-    height:100vh;
+   min-height:100vh;
 
     background:
     url("images/prewedding.jpg")
@@ -973,5 +979,238 @@ footer h3{
         width:100%;
     }
 
+}
+/* =================================
+   FINAL RESPONSIVE MOBILE FIX
+================================= */
+
+@media screen and (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    section{
+        width:100%;
+        overflow:hidden;
+    }
+
+    /* Splash */
+
+    .splash-content h1{
+        font-size:2.8rem !important;
+    }
+
+    .invite-text{
+        font-size:1rem !important;
+    }
+
+    .allah-text{
+        font-size:0.9rem !important;
+    }
+
+    #openBtn{
+        width:180px;
+        font-size:15px;
+    }
+
+    /* Hero */
+
+    .hero{
+        min-height:100vh;
+        padding:20px;
+    }
+
+    .bismillah{
+        font-size:2rem;
+    }
+
+    .subtitle{
+        font-size:12px;
+        letter-spacing:2px;
+    }
+
+    .couple-name{
+        font-size:3.2rem !important;
+        line-height:1.2;
+    }
+
+    .couple-name span{
+        font-size:2rem !important;
+    }
+
+    .arabic-text{
+        font-size:1.4rem;
+    }
+
+    .marry-text{
+        font-size:1rem;
+    }
+
+    /* Scratch Date */
+
+    .scratch-card{
+        width:90%;
+        max-width:280px;
+        height:60px;
+    }
+
+    .real-date{
+        font-size:1rem;
+    }
+
+    /* Couple Section */
+
+    .couple-section{
+        padding:60px 15px;
+    }
+
+    .glass-card{
+        width:100%;
+        max-width:340px;
+    }
+
+    .glass-card img{
+        height:320px;
+    }
+
+    /* Countdown */
+
+    .countdown-section{
+        padding:70px 15px;
+    }
+
+    .countdown-section h2{
+        font-size:2.2rem !important;
+    }
+
+    .countdown{
+        display:flex;
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        overflow-x:auto;
+        gap:10px;
+        padding-bottom:10px;
+    }
+
+    .box{
+        width:85px !important;
+        height:85px !important;
+        flex-shrink:0;
+    }
+
+    .box span{
+        font-size:1.8rem !important;
+        margin-bottom:5px;
+    }
+
+    .box small{
+        font-size:10px !important;
+    }
+
+    /* RSVP */
+
+    .rsvp-section{
+        padding:70px 15px;
+    }
+
+    .rsvp-section h2{
+        font-size:2.2rem;
+    }
+
+    .rsvp-text{
+        font-size:1rem;
+    }
+
+    .rsvp-btn{
+        width:100%;
+        max-width:300px;
+    }
+
+    /* Story */
+
+    .story{
+        padding:70px 15px;
+    }
+
+    .story-image{
+        width:100%;
+        border-radius:20px;
+    }
+
+    .story-text h2{
+        font-size:2.2rem !important;
+    }
+
+    .story-text p{
+        font-size:1.1rem;
+    }
+
+    /* Events */
+
+    .events{
+        padding:70px 15px;
+    }
+
+    .event-card{
+        width:100%;
+        max-width:340px;
+        padding:30px 20px;
+    }
+
+    .event-card h2{
+        font-size:1.6rem;
+    }
+
+    .event-card p{
+        font-size:1rem;
+    }
+
+    /* Venue */
+
+    .venue{
+        padding:70px 15px;
+    }
+
+    .venue h2{
+        font-size:2.2rem !important;
+    }
+
+    .venue p{
+        font-size:1rem;
+    }
+
+    .map-btn{
+        width:100%;
+        max-width:280px;
+    }
+
+    /* Footer */
+
+    footer{
+        padding:70px 15px;
+    }
+
+    footer h2{
+        font-size:2.2rem !important;
+    }
+
+    footer h3{
+        font-size:2rem;
+    }
+
+    footer p{
+        font-size:1rem;
+    }
+
+    /* Music Button */
+
+    #musicBtn{
+        width:50px;
+        height:50px;
+        font-size:18px;
+        right:15px;
+        bottom:15px;
+    }
 }
 
