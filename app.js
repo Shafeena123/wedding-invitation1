@@ -1,4 +1,3 @@
-
 // ==========================================
 // SPLASH SCREEN OPENING
 // ==========================================
@@ -8,8 +7,25 @@ const openBtn = document.getElementById("openBtn");
 
 const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
+// ==========================================
+// SKIP SPLASH WHEN RETURNING FROM RSVP PAGES
+// ==========================================
+
+const urlParams = new URLSearchParams(window.location.search);
+
+if (urlParams.get("skipSplash") === "true") {
+    splash.style.display = "none";
+
+// Try to play music automatically
+    if (sessionStorage.getItem("musicAllowed") === "true") {
+        music.play().catch(() => {});
+    }
+}
 
 openBtn.addEventListener("click", () => {
+
+    // Remember that the user has opened the invitation
+    sessionStorage.setItem("musicAllowed", "true");
 
     gsap.to("#splash", {
         opacity: 0,
@@ -28,10 +44,13 @@ openBtn.addEventListener("click", () => {
 // ==========================================
 
 function revealDate() {
-    document
-        .getElementById("scratchLayer")
-        .classList
-        .add("reveal");
+
+    // Animate the scratch layer away
+    document.getElementById("scratchLayer").classList.add("reveal");
+
+    // Show the hidden date
+    document.getElementById("realDate").style.opacity = "1";
+
 }
 
 // ==========================================
@@ -418,4 +437,3 @@ document.querySelectorAll(
     });
 
 });
-
