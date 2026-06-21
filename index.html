@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
 
 <title>Shafeena ❤️ Shamir | Wedding Invitation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
@@ -29,20 +28,24 @@
     <div class="splash-content">
 
         <p class="allah-text">
-            In The Name Of Allah
-        </p>
+    In The Name Of Allah
+</p>
 
-        <h1>
-            Shafeena ❤️ Shamir
-        </h1>
+<div class="couple-title">
+    <div class="bride-name">Shafeena</div>
 
-        <p class="invite-text">
-            Cordially Invite You to Our Special Day
-        </p>
+    <div class="weds-text">weds</div>
 
-        <button id="openBtn">
-            Tap To Open
-        </button>
+    <div class="groom-name">Shamir</div>
+</div>
+
+<p class="invite-text">
+    Cordially Invite You to Our Special Day
+</p>
+
+<button id="openBtn">
+    Tap To Open
+</button>
 
     </div>
 
@@ -84,17 +87,17 @@
 
    
     <!-- Scratch Date Reveal -->
-    <div class="scratch-card" onclick="revealDate()">
-
-        <div class="real-date">
-            11 October 2026
-        </div>
-
-        <div class="scratch-layer" id="scratchLayer">
-            ✨ Scratch To Reveal Date ✨
-        </div>
-
+   <div class="scratch-card" onclick="revealDate()">
+    <div class="real-date" id="realDate">
+        11 October 2026
     </div>
+
+    <div class="scratch-layer" id="scratchLayer">
+        <span class="tap-icon">👆</span>
+        <span>TAP TO REVEAL DATE</span>
+        <span class="sparkle">✨</span>
+    </div>
+</div>
 
 </div>
 </section>
@@ -105,14 +108,14 @@
         <img src="images/bride.jpg" alt="">
         <h2>Shafeena</h2>
         <p>The Bride</p>
-        <p><strong>D/O T.Sainudeen</strong></p>
+        <p class="parent-name">D/O T.Sainudeen</p>
     </div>
 
     <div class="glass-card groom">
         <img src="images/groom.jpg" alt="">
         <h2>Shamir</h2>
         <p>The Groom</p>
-        <p><strong>S/O Subair</strong></p>
+        <p class="parent-name">S/O Subair</p>
     </div>
 
 </section>
@@ -150,7 +153,7 @@
 
 
 
-<section class="rsvp-section">
+<section class="rsvp-section" id="rsvp">
 
     <h2>Will You Attend?</h2>
 
@@ -160,15 +163,17 @@
 
     <div class="rsvp-buttons">
 
-        <button class="rsvp-btn yes-btn" onclick="goToThankYou()">
-            Yes, Insha Allah
-        </button>
+    <button class="rsvp-btn yes-btn"
+            onclick="window.location.href='yes.html'">
+        Yes, Insha Allah
+    </button>
 
-        <button class="rsvp-btn no-btn">
-            Unfortunately, I Can't Make It
-        </button>
+    <button class="rsvp-btn no-btn"
+            onclick="window.location.href='no.html'">
+        Unfortunately, I Can't Make It
+    </button>
 
-    </div>
+</div>
 
 </section>
 
@@ -188,39 +193,87 @@
     </div>
 
 </section>
-<section class="events">
 
-    <div class="event-card">
-        <h2>🌿 Mehendi Ceremony</h2>
-        <p>10 October 2026</p>
-        <p>8:00 PM</p>
-        <p>Taj Palace, Shimogga</p>
+<section class="wedding-details">
+
+    <div class="details-card">
+
+        <!-- Arabic -->
+        <h2 class="bismillah-title">
+            إِنْ شَاءَ ٱللَّٰهُ
+        </h2>
+<!-- Mehandi Card -->
+    <div class="detail-card">
+
+        <img src="images/mehendi-icon.png"
+             alt="Mehandi"
+             class="detail-icon">
+
+        <div class="detail-text">
+            <h3>MEHANDI</h3>
+
+            <p>SATURDAY</p>
+
+            <p>OCTOBER 10, 2026</p>
+        </div>
+
     </div>
 
-    <div class="event-card">
-        <h2>💍 Nikah Ceremony</h2>
-        <p>11 October 2026</p>
-        <p>11:30 AM</p>
-        <p>Taj Palace, Shimogga</p>
+    <!-- Nikah Card -->
+    <div class="detail-card">
+
+        <img src="images/nikah-icon.png"
+             alt="Nikah"
+             class="detail-icon">
+
+        <div class="detail-text">
+
+            <h3>NIKAH</h3>
+
+            <p>SUNDAY</p>
+
+            <p>OCTOBER 11, 2026</p>
+
+            <p>Hijri 1448, 30 Rabi-ul-Akhir</p>
+
+        </div>
+
     </div>
 
-</section>
+    <!-- Venue -->
+    <h2 class="venue-title">
+        The Venue
+    </h2>
 
-<section class="venue">
+    <img src="images/hall.jpg"
+         alt="Wedding Hall"
+         class="venue-image">
 
-    <h2>Taj Palace</h2>
+    <div class="venue-address">
 
-    <p>
-        Aks Layout, Mattur Main Road,
-        Urgadur, Shimoga – 577203,
-        Karnataka
-    </p>
+        <h3>Taj Palace</h3>
 
-    <a class="map-btn"
-       href="https://maps.app.goo.gl/hNm4qvZvtt2MXunY9?g_st=aw"
-       target="_blank">
-       Open Google Maps
-    </a>
+        <p>
+            AKS Layout,<br>
+            Mattur Main Road,<br>
+            Urgadur,<br>
+            Shivamogga – 577203,<br>
+            Karnataka
+        </p>
+
+    </div>
+
+   <div class="map-container">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.975394658616!2d75.57392697593588!3d13.900418886507111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbba9f0eb037063%3A0x9233f7c26464eee!2sTaj%20palec!5e0!3m2!1sen!2sin!4v1781959962910!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
 
 </section>
 
@@ -246,4 +299,3 @@ Your presence is the greatest gift we could ask for. Let's make memories that wi
 
 </body>
 </html>
-
