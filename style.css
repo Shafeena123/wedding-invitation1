@@ -1,3 +1,4 @@
+
 /* =========================
    GOOGLE FONTS
 ========================= */
@@ -1116,6 +1117,108 @@ couple-title{
         height: 300px;
     }
 }
+
+/* ===========================
+   LEAVE A BLESSING
+=========================== */
+
+.blessing-section{
+    background:#000;
+    color:#fff;
+    padding:90px 20px;
+    text-align:center;
+}
+
+.blessing-section h2{
+    font-size:3.5rem;
+    color:#D4AF37;
+    margin-bottom:15px;
+}
+
+.blessing-subtitle{
+    max-width:700px;
+    margin:0 auto 40px;
+    font-size:1.3rem;
+    color:#ddd;
+}
+
+#blessingForm{
+    max-width:650px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+#blessingForm input,
+#blessingForm textarea{
+
+    width:100%;
+    padding:18px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#1b1b1b;
+
+    color:#fff;
+
+    font-size:1.1rem;
+
+    outline:none;
+
+    border:1px solid rgba(212,175,55,.4);
+}
+
+#blessingForm textarea{
+    resize:none;
+}
+
+#blessingForm button{
+
+    background:linear-gradient(
+        45deg,
+        #D4AF37,
+        #F7E7A1
+    );
+
+    color:#111;
+
+    border:none;
+
+    padding:16px;
+
+    font-size:1.1rem;
+
+    font-weight:bold;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#blessingForm button:hover{
+    transform:translateY(-3px);
+}
+
+#blessingMessage{
+    margin-top:25px;
+    color:#F7E7A1;
+    font-size:1.1rem;
+}
+
+@media(max-width:768px){
+
+    .blessing-section h2{
+        font-size:2.5rem;
+    }
+
+    .blessing-subtitle{
+        font-size:1rem;
+    }
+}
 /* =========================
    FOOTER
 ========================= */
@@ -1426,4 +1529,3 @@ footer h3{
         bottom:15px;
     }
 }
-
