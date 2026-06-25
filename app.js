@@ -1,3 +1,4 @@
+
 // ==========================================
 // SPLASH SCREEN OPENING
 // ==========================================
@@ -23,6 +24,7 @@ if (urlParams.get("skipSplash") === "true") {
 }
 
 openBtn.addEventListener("click", () => {
+
 
     // Remember that the user has opened the invitation
     sessionStorage.setItem("musicAllowed", "true");
@@ -435,5 +437,56 @@ document.querySelectorAll(
         });
 
     });
+
+});
+// ==========================================
+// LEAVE A BLESSING
+// ==========================================
+
+const blessingForm = document.getElementById("blessingForm");
+
+blessingForm.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const message =
+        document.getElementById("blessingMessage");
+
+    const formData = new FormData();
+
+    formData.append(
+        "name",
+        document.getElementById("guestName").value
+    );
+
+    formData.append(
+        "wish",
+        document.getElementById("guestWish").value
+    );
+
+    try {
+
+        await fetch(
+            "https://script.google.com/macros/s/AKfycbzJVu_LwieBAEW99iKnfZkv8gbCLKqGzvo-KOQ7RhbQIyjA14-pzaRirKy_09eT29oO/exec",
+            {
+                method: "POST",
+                body: formData,
+                mode: "no-cors"
+            }
+        );
+
+        message.innerHTML =
+            "✨ Thank you for your beautiful blessing!";
+
+        blessingForm.reset();
+
+    } catch(err) {
+
+        console.error(err);
+
+        message.innerHTML =
+            "❌ Unable to submit blessing.";
+
+    }
 
 });
